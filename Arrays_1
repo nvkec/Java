@@ -1,5 +1,6 @@
-/* WAP to create an array with 10 size and of int holding ability. Store values 1-10 in it. Using the length variable, access each element of the array and print it to the console. Create the array in 2 ways - one using the new operator and then storing the values individually, two by creating the array with the values directly in the array. 
-Loop over the array using an index variable and the enhanced for as well.*/
+/* WAP to create an array with 10 size and of int holding ability. Store values 1-10 in it. Using the length variable, access each element 
+of the array and print it to the console. Create the array in 2 ways - one using the new operator and then storing the values individually,
+two by creating the array with the values directly in the array. Loop over the array using an index variable and the enhanced for as well.*/
 
 package com.uttara.test;
 

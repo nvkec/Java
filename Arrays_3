@@ -2,3 +2,27 @@ Take integer inputs from the user via the command line (as strings). Depending o
 with the size and using Integer.parseInt() convert the string inputs and store them in the array and print out the values to the console.
 
 package com.uttara.test;
+
+public class test {
+
+	public static void main(String[] args) {
+	
+  /*calculating the size of the array passed as command line arguments*/
+	int size = args.length;
+	int [] arr = new int[size];
+	
+  /* Converting string inputs to integer using Integer.parseInt()*/
+	for(int i=0; i<size; i++)
+	{
+		arr[i] = Integer.parseInt(args[i]);
+		
+	}
+	
+  /* Printing the stored values*/
+	for(int j=0; j<size; j++)
+	{
+		System.out.println(arr[j]);
+	}
+	
+	}		
+}

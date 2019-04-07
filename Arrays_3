@@ -1,0 +1,4 @@
+Take integer inputs from the user via the command line (as strings). Depending on how many elements have been passed, create an int array 
+with the size and using Integer.parseInt() convert the string inputs and store them in the array and print out the values to the console.
+
+package com.uttara.test;

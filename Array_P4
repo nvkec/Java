@@ -1,14 +1,14 @@
 /* WAM to pass 2 arrays of ints to a method. The method should return the average of the values across the 2 arrays. The avg returned 
 should be exact and not an approximation */
 
+package com.uttara.test;
 public class test {
-
 	public static float AvgArrayTwo(int [] array1 , int [] array2)
 	{	
 		int len1 = array1.length;
 		int len2 = array2.length;
 		int sum1 = 0;
-    int sum2 = 0;
+    		int sum2 = 0;
 		float avg,avg1,avg2;
 	
 		for(int i =0; i < len1; i++)

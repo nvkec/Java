@@ -1,6 +1,6 @@
 WAM to add an arrays of ints and return the sum value. Test for boundary cases.
 
-package Test.uttara.com
+package com.uttara.test;
 public class test {
     public static int sum(int[] arr) {
 		int sum = 0;

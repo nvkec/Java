@@ -1,8 +1,7 @@
 /* WAM to accept an array of ints as parameter. The method should return the max value from it. Add another method which returns the min 
 from the elements */
 
-package test.uttara.com;
-
+package com.uttara.test;
 public class test {
 
 	public static int Max(int[] arr) {

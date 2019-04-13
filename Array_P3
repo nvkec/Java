@@ -1,5 +1,6 @@
 /* WAM to pass 2 arrays of ints to a method. The method should return the max value present across both the array elements */
 
+package com.uttara.test;
 public class test {
 
 	public static int MaxArrayTwo(int [] array1, int [] array2) {

@@ -1,5 +1,4 @@
-/*WAM to accept an int input. The method should return whether the num passed is a square (like i/p-> 100, 9, 16, etc -> o/p should be 
-true) or not */
+/*WAM to accept an int input. Find the sum of the digits in the number and return it*/
 
 public class test {
 

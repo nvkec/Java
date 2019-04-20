@@ -1,0 +1,31 @@
+/* WAM to accept an int array and return a sorted array. How many different ways do you know to sort? */
+
+public class test {
+		public static int [] SortedArray(int [] array1)
+		{
+			int i ,j,temp;
+			
+			for (i = 0; i < array1.length; i++){
+				for (j = i+1; j< array1.length; j++){
+					if(array1[i] > array1[j])
+					{
+						temp = array1[i];
+						array1[i] = array1[j];
+						array1[j] = temp;
+					}
+				}
+			}
+			
+			return array1;
+		}
+		public static void main(String[] args)
+		{
+			int [] a = {5,3,7,1,8,9};
+			int [] sortedarray = SortedArray(a);
+			System.out.println("Sorted array is: ");
+			for (int i = 0; i < sortedarray.length; i++)
+			{
+				System.out.println(sortedarray[i]);
+			}
+		}
+	}

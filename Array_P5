@@ -1,7 +1,35 @@
-/* WAM to accept an int input. The method should return whether the num passed is a square (like i/p-> 100, 9, 16, etc -> o/p should be 
+/*WAM to accept an int input. The method should return whether the num passed is a square (like i/p-> 100, 9, 16, etc -> o/p should be 
 true) or not */
 
 public class test {
 
-	
+    public static boolean SquareNumber(int num)
+       {	
+       int i = 0;
+       if (num < 0)
+       {
+    	   System.out.println("Input positive number");
+    	   return false;
+       }
+		
+       while(i < num)
+       {
+    	   if(i * i == num) 
+   		      {
+    		      System.out.println("Number is a Square number:" + num);
+    		      return true;
+   		       }
+   		     else
+   		       {
+   			       i++;
+   			       continue;
+   		       }
+         }
+		  return false;
+	 }
+
+	public static void main(String[] args)
+	{
+		System.out.println("SquareNumber "+ SquareNumber(100));
+	}
 }

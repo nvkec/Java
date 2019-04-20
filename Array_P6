@@ -2,33 +2,18 @@
 
 public class test {
 
-	public static boolean SquareNumber(int num)
-	{	
-       int i = 0;
-       if (num < 0)
-       {
-    	   System.out.println("Input positive number");
-    	   return false;
-       }
-		
-       while(i < num)
-       {
-    	   if(i * i == num) 
-   		      {
-    		      System.out.println("Number is a Square number:" + num);
-    		      return true;
-   		       }
-   		     else
-   		       {
-   			       i++;
-   			       continue;
-   		       }
-         }
-		  return false;
-	  }
-
+	public static int SumOfDigits(int num)
+	{
+		int sum = 0;
+		while(num != 0)
+		{
+			sum = sum + (num % 10);
+			num = num/10;
+		}
+		return sum;
+	}
 	public static void main(String[] args)
 	{
-		System.out.println("SquareNumber "+ SquareNumber(100));
+		System.out.println("Sum of Digits in the number "+ SumOfDigits(100));
 	}
 }

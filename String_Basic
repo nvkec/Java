@@ -120,4 +120,30 @@ public class test {
 
 /* Take string inputs from arg[0], arg[1]. Print whichever string is bigger than the other alphabetically */
 
+public class test {
 
+	public static void main(String[] args)
+	{
+		String s1 = args[0];
+		String s2 = args[1];
+		
+		int var = s1.compareTo(s2);
+		if(var > 0)
+			{
+				System.out.println("Strings s1 bigger than s2 " +var);
+			}
+			else if(var < 0)
+			{
+				System.out.println("Strings s1 smaller than s2 " +var);
+				
+			}
+			else if(var == 0)
+			{
+				System.out.println("Strings s1 equal to s2");
+				
+			}
+
+		}
+}
+
+/* Take string inputs from arg[0], arg[1]. Find out if arg[1] is present in arg[0] string and print if the search succeeds */

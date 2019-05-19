@@ -1,0 +1,33 @@
+/* Create a String object using new operator and using a string literal and print out its value using SOP to the console */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = new String("abc");
+		String s2  = "xyz";
+		
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+}
+
+************************************************************************************************************************************
+
+/* Create a String and print out its length to the console using SOP */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = new String("abcdef");
+		
+		int len = s1.length();
+		System.out.println("len = "+len);
+	}
+	
+}
+
+***************************************************************************************************************************************
+
+/* Take a string input from arg[0]. Print the chars one at a time to the console */

@@ -31,3 +31,46 @@ public class test {
 ***************************************************************************************************************************************
 
 /* Take a string input from arg[0]. Print the chars one at a time to the console */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = args[0];
+		
+		char c;
+		for(int i = 0; i < s1.length(); i++)
+		{
+			c = s1.charAt(i);
+			System.out.println(c);
+		}
+	}
+}
+
+*****************************************************************************************************************************************
+
+/* Take a string input from arg[0]. Print the even chars only */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = args[0];
+		
+		char c;
+		for(int i = 0; i < s1.length(); i = i+2)
+		{
+			c = s1.charAt(i);
+			System.out.println(c);
+		}
+	}
+}
+
+******************************************************************************************************************************************
+
+/* Take a string input from arg[0]. Print the alternate chars in one line and the remaining in another */
+
+
+
+
+

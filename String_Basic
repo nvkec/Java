@@ -146,4 +146,21 @@ public class test {
 		}
 }
 
+***********************************************************************************************************************************************
+/* Take string inputs from arg[0], arg[1]. Convert their cases and print them to the console */
+
+	public class test {
+
+		public static void main(String[] args)
+		{
+			String s1 = args[0];
+			String s2 = args[1];
+		
+			System.out.println("Lowercase " +s1.toLowerCase());
+			System.out.println("Uppercase " +s2.toUpperCase());	
+		}
+	}
+	
+*********************************************************************************************************************************************	
+
 /* Take string inputs from arg[0], arg[1]. Find out if arg[1] is present in arg[0] string and print if the search succeeds */

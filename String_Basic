@@ -164,3 +164,27 @@ public class test {
 *********************************************************************************************************************************************	
 
 /* Take string inputs from arg[0], arg[1]. Find out if arg[1] is present in arg[0] string and print if the search succeeds */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = args[0];
+		String s2 = args[1];
+		
+		if(s1.indexOf(s2) != -1)
+		{
+			System.out.println("Substring is found at index " +s1.indexOf(s2));
+		}
+		else
+		{	
+			System.out.println("Substring is not found in the given string ");
+		}
+	}
+}
+
+**********************************************************************************************************************************************
+
+/* Take the input of a string from the command line (arg[0]) and print "You have a good name, <name concatenated>!" if the length of the
+string is < 12 chars and "You have a very long name, <name concatenated>!" if the length of the name is >=12 chars. If no input has been
+given, show an appropriate error message */

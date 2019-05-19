@@ -24,6 +24,36 @@ public class test {
 *****************************************************************************************************************************************
 /* Take a string as input. Print out the number of vowels and consonants in it */
 
+public class test {
+
+	public static void main(String[] args)
+	{
+		String s1 = args[0];
+		char c;
+		int vowels = 0 ; 
+		int consonants = 0;
+		
+		for(int i = 0; i < s1.length(); i++)
+		{
+			c = s1.charAt(i);
+			if(c == 'a'|| c == 'e' || c == 'i' || c == 'o'|| c == 'u')
+			{
+				vowels++;
+			}
+			else
+			{
+				consonants++;
+			}
+		}
+		
+		System.out.println("Vowels count "+ vowels);
+		System.out.println("Consonants count "+ consonants);
+	}
+}
+******************************************************************************************************************************************
+/* Find out whether a string is a palindrome */
+
+
 
 
 

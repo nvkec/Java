@@ -42,7 +42,8 @@ public class test {
 		for(int i = 0; i < s1.length(); i++)
 		{
 			c = s1.charAt(i);
-			System.out.println(c);
+			System.out.println(c);  /* Prints every char in next line */
+			System.out.print(c + " ");  /* Prints all char in same line with space between each char */
 		}
 	}
 }
@@ -61,7 +62,7 @@ public class test {
 		for(int i = 0; i < s1.length(); i = i+2)
 		{
 			c = s1.charAt(i);
-			System.out.println(c);
+			System.out.print(c + " ");
 		}
 	}
 }

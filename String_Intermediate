@@ -101,3 +101,61 @@ public class test {
 }
 *****************************************************************************************************************************************
 /* Take string inputs from arg[0], arg[1]. Find the number of occurrences of arg[1] in arg[0] and print it out */
+
+public class test {
+
+	public static void main(String[] args)
+	{
+		
+		int pos=0;
+		int count=0;
+		String s1 = args[0];
+		String s2 = args[1];
+		String s3 = s1.trim();
+		String s4 = s2.trim();
+		
+		if(s1==null || s2==null)
+			System.out.println("Please provide some input values ");
+		
+		if(s3.equals(s4))
+			System.out.println("Strings are equal");
+		
+		while((pos = s1.indexOf(s2,pos)) != -1)
+		{
+			pos++;
+			count++;
+		}
+		System.out.println("Number of occurences of s2 in s1 is: " + count);
+	}
+}
+
+
+
+Test Cases:-
+S1         			S2
+ramaramaramara			ra
+xyz				ra
+""				""
+" "				" "
+"  ramaramaramara "		" ra "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

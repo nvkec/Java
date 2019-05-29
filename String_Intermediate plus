@@ -58,8 +58,42 @@ public class test {
 =================================================================================================================================
 /* Take any number of string inputs from the command line. Sort the strings alphabetically and print them out */
 
+public class test {
 
-
+	public static void main(String[] args)
+	{
+		int len = args.length;
+		String [] str = new String[len];
+		for(int x =0; x < len; x++)
+		{
+			str[x] = args[x];
+		}
+		
+		for(int i = 0; i < len; i++)
+		{
+			for(int j = i+1; j < len; j++)
+			{
+				if((str[i].compareTo(str[j])) > 0)
+				{
+					String temp = str[i];
+					str[i] = str[j];
+					str[j]= temp;
+				}
+			}
+			
+		}
+		
+		System.out.println("Strings sorted in alphabetical order");
+		for(int i = 0; i < len; i++){
+			System.out.println(str[i]);
+		}
+	}
+	
+}
 =================================================================================================================================
+/* Print the number of occurrences of every character in an input string */
+
+
+==================================================================================================================================
 /* Take string input from arg[0]. Print all unique chars from this string to the console */
 

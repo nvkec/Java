@@ -1,3 +1,0 @@
-WAP to create an array of strings with 5 colors as values. Use Math.random() to randomly print out the values from the array
-
-package com.uttara.test;

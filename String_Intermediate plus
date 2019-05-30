@@ -28,7 +28,12 @@ public class test {
 ========================================================================================================================================
 /* Take string inputs from arg[0]. Sort the characters in the string and print them out */
 public class test {
-
+	public static void swapChars(int i, int j, char[] ch) {
+        	char temp = ch[i];
+        	ch[i] = ch[j];
+        	ch[j] = temp;
+    	}
+	
 	public static void main(String[] args)
 	{
 		
@@ -49,11 +54,7 @@ public class test {
 		System.out.println("Sorted string " + s2);
 	}
 	
-	public static void swapChars(int i, int j, char[] ch) {
-        char temp = ch[i];
-        ch[i] = ch[j];
-        ch[j] = temp;
-    }
+	
 }
 =================================================================================================================================
 /* Take any number of string inputs from the command line. Sort the strings alphabetically and print them out */

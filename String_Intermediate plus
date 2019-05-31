@@ -25,7 +25,7 @@ public class test {
 		
 	}
 }
-========================================================================================================================================
+*****************************************************************************************************************************************
 /* Take string inputs from arg[0]. Sort the characters in the string and print them out */
 public class test {
 	public static void swapChars(int i, int j, char[] ch) {
@@ -56,7 +56,7 @@ public class test {
 	
 	
 }
-=================================================================================================================================
+*****************************************************************************************************************************************
 /* Take any number of string inputs from the command line. Sort the strings alphabetically and print them out */
 
 public class test {
@@ -91,7 +91,7 @@ public class test {
 	}
 	
 }
-==================================================================================================================================
+***************************************************************************************************************************************
 /* Take string input from arg[0]. Print all unique chars from this string to the console */
 
 public class test {
@@ -152,3 +152,24 @@ public class test {
      i/p : xxxxxxxgggggggggmmckkkll
      o/p : x7g9m2c1k3l2 (symbol followed by number of occurrences)
 */    
+
+In the above code replace 
+
+				if(j == (length-1))
+				{
+					System.out.println("The Character "+c[i]+ " is present "+counter+" times");
+				}
+with
+
+				if(j == (length-1))
+				{
+					System.out.print(c[i]);
+					System.out.print(counter);
+				}
+then we will get o/p in the x7g9m2c1k3l2 (symbol followed by number of occurrences)
+
+****************************************************************************************************************************************
+/*   Find out if one string is a permutation of the other
+     i/p : "staple" "plates" o/p: yes
+     i/p : "economics" "economios" o/p: no
+*/

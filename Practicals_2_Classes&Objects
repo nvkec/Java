@@ -3,7 +3,7 @@ tester code. After testing if cows work correctly, create 2 references andthen p
 of the object using one ref when you invoke behaviour using the second.! */
 
 /*Cow class design*/
-public class test {
+public class Cow {
 
 	String name;
 	public void moo()
@@ -45,7 +45,7 @@ public class Obj {
 	boolean b;
 }
 
-public class testObj {
+public class TestObj {
 
 	public static void main(String[] args)
 	{

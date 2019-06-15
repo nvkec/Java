@@ -127,10 +127,62 @@ public class TestPen {
 /* There are Persons. A person has a age, name. Persons can eat ,sleep. A person sleeps more if his age is < 40 and eats less. If the
 persons age is >= 40, he sleeps less but eats more. Design a Person class and test it */
 
+//Person class design//
 
+public class Person {
 
+	int age;
+	String name;
+	
+	public void eat(int data)
+	{
+		if(data < 40)
+			{
+				System.out.println("Person "+name+" sleeps more");
+			}
+		else
+			{
+				System.out.println("Person "+name+" sleeps less");
+			}
+	}
+	
+	public void sleep(int data)
+	{
+		if(data < 40)
+		{
+			System.out.println("Person "+name+" eats less");
+		}
+	else
+		{
+			System.out.println("Person "+name+" eats more");
+		}
+	}
+	
+}
 
+//Person tester class//
+public class TestPerson {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person p1 = new Person();
+		
+		p1.name = "ramu";
+		p1.eat(40);
+		p1.sleep(40);
+		
+		Person p2 = new Person();
+		p1.name = "somu";
+		p1.eat(20);
+		p1.sleep(20);
+	}
+
+}
+
+***********************************************************************************************************************************************
+/*There are Dogs. Every Dog has a name and a size. Dogs can bark. If the size of the dog is > 10, it "meows". If the size <=10, then as
+many times, it "bow wow" its name to the monitor. Test Dog design. After testing the same, make the size variable private and then add 
+setSize()/getSize() method. See how this impacts your tester class */
 
 
 

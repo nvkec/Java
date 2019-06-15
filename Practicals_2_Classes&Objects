@@ -184,6 +184,64 @@ public class TestPerson {
 many times, it "bow wow" its name to the monitor. Test Dog design. After testing the same, make the size variable private and then add 
 setSize()/getSize() method. See how this impacts your tester class */
 
+//Dog class design//
+public class Dog {
+
+	String name;
+	private int size;
+	
+	//setter
+	public void setSize(int val)
+	{
+		if(val > 0)
+			size = val;
+		else
+			System.out.println("Please input proper values");
+			
+	}
+	
+	//getter
+	public int getSize()
+	{
+		return size;
+	}
+	
+	public void bark(int data)
+	{
+		if(data > 10)
+			{
+			System.out.println("Dog with  "+name+" meows");
+			}
+		else
+			{
+			for(int i = 0; i < data;i++)
+			{
+			System.out.println("Dog with  "+name+" bow wow");
+			}
+	}
+	
+  }
+}
+
+//Dog tester class//
+public class testClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		test d1 = new test();
+		
+		d1.name = "ruby";
+		d1.setSize(-1);
+		d1.setSize(3);
+		d1.setSize(0);
+		d1.bark(3);
+		d1.bark(20);
+		d1.bark(0);
+		}
+}
+***************************************************************************************************************************************************
+/* Cars can be started, driven, reversed or stopped. You have to start the car to drive/reverse/stop it. When car is being driven / reversed,
+the fuel reduces. Once the car has no fuel, the car stops. Every car has a name. Write a tester class to test cars */
 
 
 

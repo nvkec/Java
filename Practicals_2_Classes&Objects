@@ -224,11 +224,11 @@ public class Dog {
 }
 
 //Dog tester class//
-public class testClass {
+public class TestDog {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		test d1 = new test();
+		Dog d1 = new Dog();
 		
 		d1.name = "ruby";
 		d1.setSize(-1);

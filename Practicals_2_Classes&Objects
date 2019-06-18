@@ -243,9 +243,142 @@ public class TestDog {
 /* Cars can be started, driven, reversed or stopped. You have to start the car to drive/reverse/stop it. When car is being driven / reversed,
 the fuel reduces. Once the car has no fuel, the car stops. Every car has a name. Write a tester class to test cars */
 
+//Car class design//
+public class Car {
+
+	private String name;
+	private int fuel;
+	private int maxFuelQty;
+	private boolean isStarted;
+	
+	public Car(String n, int maxf)
+	{
+		name = n;
+		maxFuelQty = maxf;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public int getmaxFuelQty()
+	{
+		return maxFuelQty;
+	}
+	
+	public int getFuel()
+	{
+		return fuel;
+	}
+	
+	public boolean addFuel(int qty)
+	{
+		if(fuel+qty > maxFuelQty)
+		{
+			System.out.println("Add fuel is failing because of overflow ");
+			return false;
+		}
+		else
+		{	System.out.println("Adding fuel  " +qty);
+			fuel = fuel+qty;
+		   	System.out.println("Total Fuel qty after adding the fuel is  " +fuel);
+		    	return true;
+		}
+	}
+	
+	public void start()
+	{
+		System.out.println("Car "+name+" has started");
+		isStarted = true;
+		
+	}
+	
+	public boolean drive()
+	{
+		if(isStarted)
+		{
+			if(fuel > 0)
+			{
+				System.out.println("Car "+name+" is being driven");
+				fuel--;
+				return true;
+			}
+			else
+			{
+				System.out.println("Car "+name+" has been stopped as there is no fuel");
+				stop();
+				return false;
+			}
+			
+		}
+		else
+		{
+			System.out.println("Car "+name+" cannot be started as it has not started");
+			return false;
+		}
+		
+	}
+	
+	
+	public void stop()
+	{
+		System.out.println("Stopping the Car ");
+		isStarted = false;
+	}
+  
+	public boolean reverse()
+	{
+		if(isStarted)
+		{
+			if(fuel > 0)
+			{
+				System.out.println("Car "+name+" is being reversed");
+				fuel--;
+				return true;
+			}
+			else
+			{
+				System.out.println("Car "+name+" has been stopped as there is no fuel");
+				stop();
+				return false;
+			}
+			
+		}
+		else
+		{
+			System.out.println("Car "+name+" cannot be reversed as it has not started");
+			return false;
+		}
+		
+	}
+}
 
 
+//Car tester class//
+public class TestCar {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car c1 = new test("Audi", 30);
+		Car c2 = new test("Benz", 50);
+		
+		c1.drive();
+		c2.reverse();
+		
+		System.out.println("Starting the cars...");
+		c1.start();
+		c1.drive();
+		
+		c1.addFuel(10);
+		c1.start();
+		c1.drive();
+		c1.drive();
+		c1.drive();
+		c1.addFuel(10);
+		c1.stop();
+		}
+}
 
 
 *********************************************************************************************************************************************

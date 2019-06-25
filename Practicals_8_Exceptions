@@ -1,1 +1,32 @@
+/* WAP to generate the following abnormal conditions in main(): */
 
+a) NullPointerException
+public class testClass {
+  public static void main(String[] args) 
+  {
+		  String np = null;
+		  np.toLowerCase();
+	}
+}
+
+Output: 
+Exception in thread "main" java.lang.NullPointerException
+	at AVIS.TestScripts.testClass.main(testClass.java:8)
+-----------------------------------------------------------
+b) ClassCastException
+
+--------------------------------------------------------------
+c) NumberFormatException
+public class testClass {
+  public static void main(String[] args)
+	  {
+		    int num=Integer.parseInt ("XYZ") ;
+	  }
+}
+
+Output:
+Exception in thread "main" java.lang.NumberFormatException: For input string: "XYZ"
+	at java.lang.NumberFormatException.forInputString(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at java.lang.Integer.parseInt(Unknown Source)
+	at AVIS.TestScripts.testClass.main(testClass.java:7)

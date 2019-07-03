@@ -51,9 +51,11 @@ public class Person {
 	{
 		if(n == null || n.trim().equals(""))
 		{
-			throw new IllegalArgumentException(“Name should not be empty or null”);
-			name = n;
+			throw new IllegalArgumentException("Name should not be empty or null");
 		}
+		else
+			name = n;
+			
 
 	}
 	
@@ -61,9 +63,10 @@ public class Person {
 	{
 		if(a < 0 || a > 100)
 		{
-			throw new IllegalArgumentException(“Is this person  born or is he already dead”); 
-			age = a;
+			throw new IllegalArgumentException("Is this person born or is he already dead");
 		}
+		else
+			age = a;
 	}
 }
 
@@ -87,6 +90,11 @@ public class TestPerson {
 	}
 }
 
+//Output
+java.lang.IllegalArgumentException: Is this person born or is he already dead
+	at AVIS.TestScripts.test.setAge(test.java:25)
+	at AVIS.TestScripts.testClass.main(testClass.java:11)
+ending...
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

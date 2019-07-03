@@ -30,3 +30,78 @@ Exception in thread "main" java.lang.NumberFormatException: For input string: "X
 	at java.lang.Integer.parseInt(Unknown Source)
 	at java.lang.Integer.parseInt(Unknown Source)
 	at AVIS.TestScripts.testClass.main(testClass.java:7)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/* Create a Person. A person has a name and an age (int). Code correct setter/getter methods with validations and test. Remember all setter 
+and parameterised constructors must validate the invokers input and raise IllegalArgumentException if there is a validation failure.
+
+Create a Tester class, create a person object, set a bad age and see when you execute, are you getting the IllegalArgumentException or not?
+Do you understand why we should raise exceptions for validations? */
+
+
+//Person class
+
+public class Person {
+
+	String name;
+	int age;
+	
+	public void setName(String n)
+	{
+		if(n == null || n.trim().equals(""))
+		{
+			throw new IllegalArgumentException(“Name should not be empty or null”);
+			name = n;
+		}
+
+	}
+	
+	public void setAge(int a)
+	{
+		if(a < 0 || a > 100)
+		{
+			throw new IllegalArgumentException(“Is this person  born or is he already dead”); 
+			age = a;
+		}
+	}
+}
+
+//Person tester class
+
+public class TestPerson {
+
+	public static void main(String[] args)
+	{
+		try
+		{
+			Person p = new Person();
+			
+			p.setAge(-5);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println("ending...");
+	}
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

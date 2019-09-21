@@ -1,1 +1,53 @@
+/* Test basic methods of Scanner class usage to read inputs from the keyboard (Ex code in
+TestScanner.java)*/
+        Steps:
+        Create 2 Scanner objects wrapping System.in like this (import java.util.* as well):
+        Scanner sc1 = new Scanner(System.in);
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Enter a string input");
+        String s1 = sc1.next(); // to read a single word input
+        //print s1
+        System.out.println("Enter int as input");
+        int n = sc1.nextInt();
+        System.out.println("n = "+n);
+        double d = sc1.nextDouble();
+        //print d
+        String line = sc2.nextLine(); // sentence input
+        //print line
+        Check out other methods usage of Scanner class to read a boolean, float, long and print the
+        contents to the monitor. Remember to use sc2.nextLine() on a separate scanner.
 
+
+/*Test basic methods of File class usage (Ex code in TestFile.java)*/
+
+      import java.io.File;
+
+      public class TestFile {
+
+        public static void main(String[] args) {
+
+          if(args.length>0)
+          {
+                System.out.println("args[0] = "+args[0]);
+                File f1 = new File(args[0]);
+                System.out.println("does f1 exist ? "+f1.exists());
+                System.out.println("is directory ? "+f1.isDirectory());
+                System.out.println("is file ? "+f1.isFile());
+                System.out.println("abs path = "+f1.getAbsolutePath());
+                System.out.println("size = "+ f1.length());
+                System.out.println("is hidden ? "+f1.isHidden());
+                System.out.println("----------------");
+                if(f1.exists() && f1.isDirectory())
+                {
+                  System.out.println("listing contents of "+f1.getName());
+                  File[] fa = f1.listFiles();
+                  for(File f : fa)
+                  {
+                    System.out.println(f.getAbsolutePath());
+                  }
+                }
+          }
+          else
+                System.out.println("pls give at least one path as input");
+          }
+       }   

@@ -4,6 +4,12 @@ picked up?*/
 
 {code}
 
+
+
+
+
+
+========================================================================================================================================
 /* Code a Person class. Create 2 instance variables, one String name and one int height. Create a parameterized constructor. Create a tester class,
 create 2 person objects and compare the two using object identity check and object equality checks:
 Person p1 = new Person("Ramu",20);
@@ -32,6 +38,10 @@ return “Person:”+name+”,”+age;
 
 
 
+
+
+
+========================================================================================================================================
 /* Create a TestCollections class with main(). Create an ArrayList object like this:
 
 Collection col = new ArrayList(); //import package java.util.*;

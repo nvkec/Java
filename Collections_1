@@ -1,12 +1,19 @@
 /* WAP to compare 2 strings by == and .equals() and test whether Strings .equals() works correctly. Which equals() implementation is getting
 picked up?*/
 
+import java.util.*;
 
-{code}
+public class CollectionExample {
 
+	public static void main(String[] args) {
+		String s1 = "abc";
+		String s2 = "abc";
 
+		System.out.println("Comparing string s1 and s2: s1==s2 " + (s1 == s2));
+		System.out.println("Comparing string s1 and s2: s1.equals(s2) " + (s1.equals(s2)));
 
-
+	}
+}
 
 
 ========================================================================================================================================

@@ -9,8 +9,14 @@ public class CollectionExample {
 		String s1 = "abc";
 		String s2 = "abc";
 
-		System.out.println("Comparing string s1 and s2: s1==s2 " + (s1 == s2));
-		System.out.println("Comparing string s1 and s2: s1.equals(s2) " + (s1.equals(s2)));
+		System.out.println("String equality check :- s1==s2 " + (s1 == s2));
+		System.out.println("String identity check :- s1.equals(s2) " + (s1.equals(s2))); //String equals implementation is getting picked
+
+		String s3 = new String("chulbul");
+		String s4 = new String("chulbul");
+
+		System.out.println("String equality check :- s3==s4 " + (s3 == s4));
+		System.out.println("String identity check :- s3.equals(s4) " + (s3.equals(s4))); //String equals implementation is getting picked
 
 	}
 }

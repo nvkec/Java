@@ -126,5 +126,39 @@ System.out.println(o);
 }
 System.out.println(col); //directly print contents without iterating! */
 
-{code}
+import java.util.*;
 
+public class CollectionExample {
+
+	public static void main(String[] args) {
+
+		Collection<String> col = new ArrayList<String>();
+
+		String s1 = "rama";
+		String s2 = "soma";
+		String s3 = "bheema";
+		String s4 = "xyz";
+		String s5 = "abc";
+
+		col.add(s1);
+		col.add(s2);
+		col.add(s3);
+		col.add(s4);
+		col.add(s5);
+		col.add("abc");
+		col.add("abc");
+
+		System.out.println("Collections :- " + col);
+
+		// to iterate and print contents
+		for (Object o : col) {
+			System.out.println(o);
+		}
+
+		System.out.println("is s5 " + s5 + " present in " + col + " ? " + col.contains(s5));
+		System.out.println("After removing s5 :- " + col.remove(s5));
+		System.out.println("size = " + col.size());
+		System.out.println("Collections :- " + col);
+
+	}
+}

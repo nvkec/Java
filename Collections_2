@@ -1,10 +1,22 @@
 /* Create two strings with same state using new operator and invoke == and .equals() on them to verify working of object identity and object equality. Create the strings as
 literals as well as using the new operator. Invoke hashCode() on both and print the result. Are the hash codes same? Why? */
 
+import java.util.*;
 
+public class CollectionExample {
 
+	public static void main(String[] args) {
 
+		String s1 = new String("set");
+		String s2 = new String("set");
 
+		System.out.println("Identity Check " + (s1 == s2));
+		System.out.println("Equality Check " + (s1.equals(s2)));
+
+		System.out.println("s1.hashCode() = " + s1.hashCode());
+		System.out.println("s2.hashCode() = " + s2.hashCode());
+	}
+}
 
 ===========================================================================================================================================
 /* There are vehicles. Vehicle has a name and an engine capacity [like 100bhp, 200bhp etc => take as int]. Generate setter/getter methods and a parameterised constructor. A

@@ -28,8 +28,80 @@ invoke equals on it and find out whether object equality check is working correc
 ref and check if the contains(second ref) returns true or not => it should return true as equality check would be used to search. Verify
 if the SOP in equals() is being called or not.*/
 
+Vehicle.java:
 
+public class Vehicle {
+	private String name;
+	private int capacity;
 
+	public Vehicle()
+	{
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(int capacity) {
+		this.capacity = capacity;
+	}
+
+	public Vehicle(String name, int capacity) {
+		super();
+		this.name = name;
+		this.capacity = capacity;
+	}
+
+	public boolean equals(Object o) {
+		if (o instanceof Vehicle) {
+			Vehicle v = (Vehicle) o;
+			if (this.name.equals(v.name) && (this.capacity == v.capacity)) {
+				return true;
+			} else
+				return false;
+		} else
+			throw new IllegalArgumentException("plz pass only vehicle object to compare");
+	}
+
+	public String toString() {
+		return "Vehicle [name=" + name + ", capacity=" + capacity + "]";
+	}
+
+	public int hashCode() {
+		System.out.println("inside of hashcode");
+		return (name + capacity).hashCode();
+	}
+
+}
+
+Tester Class:
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestVehicle {
+
+	public static void main(String[] args) {
+		Vehicle v=new Vehicle("Car",100);
+		Vehicle v1=new Vehicle("Car",100);
+		System.out.println("AFTER OVERRIDING EQUALS"+"..............>"+v.equals(v1));//RETURS TRUE
+		List l=new ArrayList();
+		l.add(v);
+		l.add(v1);
+		System.out.println(l.contains(v));
+
+	}
+
+}
 
 
 

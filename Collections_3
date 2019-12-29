@@ -1,1 +1,56 @@
+1) Test basic methods of Scanner class usage
 
+Steps:
+Create 2 Scanner objects wrapping System.in like this (import java.util.* as well):
+Scanner sc1 = new Scanner(System.in);
+Scanner sc2 = new Scanner(System.in);
+System.out.println("Enter a string input");
+String s1 = sc1.next(); // to read a single word input
+//print s1
+System.out.println("Enter int as input");
+int n = sc1.nextInt();
+System.out.println("n = "+n);
+double d = sc1.nextDouble();
+//print d
+String line = sc2.nextLine(); // sentence input
+//print line
+Check out other methods usage of Scanner class.
+
+
+============================================================================================================================================
+/*Given a sentence as input, find the number of occurrences of every word in it andprint it out (using Maps).*/
+
+import java.util.*;
+
+public class CollectionExample {
+
+	public static void main(String[] args) {
+
+		List<String> li = new ArrayList<String>();
+		Map m = new LinkedHashMap();
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Sentence...>");
+
+		String sen = sc.nextLine();
+
+		String[] words = sen.split(" ");
+
+		for (String h : words) {
+
+			li.add(h);
+
+		}
+
+		for (String temp : li) {
+			int occ = Collections.frequency(li, temp);
+			m.put(temp, occ);
+		}
+
+		System.out.println(m);
+
+	}
+}
+
+
+===========================================================================================================================================

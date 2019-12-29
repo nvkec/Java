@@ -54,3 +54,9 @@ public class CollectionExample {
 
 
 ===========================================================================================================================================
+/* Take a sentence and a word as input from the user and
+a) print how many occurrences you find of an input word in the sentence (use Collections.frequency() on a List where you add the words 
+in the sentence)
+b) sort the sentence i) with duplicates ii) without duplicates and print
+c) sort the sentence using string length comparison
+d) remove all the occurrences of the word from the sentence

@@ -17,7 +17,7 @@ TestScanner.java)*/
         Check out other methods usage of Scanner class to read a boolean, float, long and print the
         contents to the monitor. Remember to use sc2.nextLine() on a separate scanner.
 
-=======================================================================================================================================
+=============================================================================================================================================
 /*Test basic methods of File class usage (Ex code in TestFile.java)*/
 
       import java.io.File;
@@ -53,7 +53,7 @@ TestScanner.java)*/
        }  
        
        
-=======================================================================================================================================  ====================================================================================================================================
+===========================================================================================================================================================================================================================================================================
 /*Write a program to read input path of a text file from the user and print its contents to the monitor.Code it directly in main() for now.*/
 
 import java.io.BufferedReader;
@@ -95,7 +95,7 @@ public class IOQuestion3 {
 	}
 
 }
-========================================================================================================================================
+=================================================================================================================================================
 /*Take 2 paths as input from user (first to an existing text file and second to one that does not exist). From one, read the file content
  and write it to another. (Ex code in TestIO.java, TestReading.java and ReadFileAndPrint.java)!
 
@@ -150,7 +150,8 @@ public class IOQuestion4 {
 	}
 }
 
-
+=============================================================================================================================================
+/* WAP to take input a path from the user. If the path is pointing to a folder, print all the file names which are .txt files */
 
 
 

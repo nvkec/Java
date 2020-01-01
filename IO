@@ -99,6 +99,56 @@ public class IOQuestion3 {
 /*Take 2 paths as input from user (first to an existing text file and second to one that does not exist). From one, read the file content
  and write it to another. (Ex code in TestIO.java, TestReading.java and ReadFileAndPrint.java)!
 
+import java.io.BufferedReader;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class IOQuestion4 {
+
+	public static void main(String[] args) {
+
+		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Enter the input file path");
+		String inPath = sc1.next();
+
+		System.out.println("Enter the output file path");
+		String outPath = sc2.next();
+
+		FileReader fr = null;
+		FileWriter fw = null;
+		int c;
+
+		try {
+			fr = new FileReader(inPath);
+			fw = new FileWriter(outPath);
+			while ((c = fr.read()) != -1) {
+				fw.write(c);
+			}
+		}
+
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		finally {
+
+			try {
+				if (fr != null)
+					fr.close();
+				if (fw != null)
+					fw.close();
+			}
+
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
 
 
 

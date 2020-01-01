@@ -17,7 +17,7 @@ TestScanner.java)*/
         Check out other methods usage of Scanner class to read a boolean, float, long and print the
         contents to the monitor. Remember to use sc2.nextLine() on a separate scanner.
 
-
+=======================================================================================================================================
 /*Test basic methods of File class usage (Ex code in TestFile.java)*/
 
       import java.io.File;
@@ -50,4 +50,47 @@ TestScanner.java)*/
           else
                 System.out.println("pls give at least one path as input");
           }
-       }   
+       }  
+       
+=======================================================================================================================================  ====================================================================================================================================
+ /*Write a program to read input path of a text file from the user and print its contents to the
+monitor. (Ex code in TestPathReading.java). Code it directly in main() for now.*/
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Question3 {
+
+	public static void main(String[] args) {
+		Scanner sc1=new Scanner(System.in);
+		System.out.println("enter the input of the file");
+		String path=sc1.next();
+		BufferedReader br=null;
+		String line;
+		try
+		{
+			br=new BufferedReader(new FileReader(path));
+			while((line=br.readLine())!=null)
+			{
+				System.out.println(line);//reading the contents of the file
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(br!=null)
+				try {
+					br.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+
+	}
+
+}

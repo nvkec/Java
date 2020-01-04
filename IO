@@ -154,8 +154,62 @@ public class IOQuestion4 {
 /* WAP to take input a path from the user. If the path is pointing to a folder, print all the file names which are .txt files */
 
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
+public class IOQuestion5 {
 
+	public static void main(String[] args) {
+
+		String path = args[0];
+
+		File f = new File(path);
+
+		if (f.exists() && f.isDirectory()) {
+
+			File[] fa = f.listFiles();
+			for (File fi : fa) {
+				if (fi.exists() && fi.getName().contains(".txt")) {
+					BufferedReader br = null;
+					try {
+						br = new BufferedReader(new FileReader(fi));
+						String line;
+						while ((line = br.readLine()) != null) {
+							System.out.println(line);
+						}
+					} catch (IOException e) {
+						e.printStackTrace();
+					} finally {
+						try {
+							if (br != null)
+								br.close();
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+					}
+				}
+			}
+		} else {
+			System.out.println("pls give at least one path as input");
+
+		}
+
+	}
+}
+
+=========================================================================================================================================
+/* Print out which word is occurring the max number of times in a file.
+
+Pseudocode:
+a)Take a file path as input. validate if it exists and if it is a text file.
+b)Create a List<String> words = new ArrayList<String>();
+c)Using BufferedReader, read one line at a time, split it by space and add all the words from String[] to the words list.
+d)After all lines content has been added to the words list, loop over 
+each word and find its number of occurrence using Collections.frequency().
+e)Print the one which has max num of occ.
+*/
 
 
 

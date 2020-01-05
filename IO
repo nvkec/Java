@@ -199,6 +199,10 @@ public class IOQuestion5 {
 	}
 }
 =========================================================================================================================================
+/* WAP to take the input from the user a path and a word. If the path is a text file, search the word in the file and print the number 
+of occurrences. If the path is a folder, read the files in the folder and print the number of occurrences in all the text files of the 
+word (important) */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

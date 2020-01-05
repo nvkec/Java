@@ -281,7 +281,7 @@ public class IOQuestion10 {
 import java.io.*;
 import java.util.*;
 
-public class CollectionExample {
+public class IOQuestion7 {
 
 	public static void main(String[] args) {
 

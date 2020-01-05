@@ -198,6 +198,79 @@ public class IOQuestion5 {
 
 	}
 }
+=========================================================================================================================================
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class IOQuestion10 {
+
+	public static void main(String[] args) {
+
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Enter the path of input file");
+		String path = sc1.next();
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Enter the word");
+		String word = sc2.next();
+
+		BufferedReader br = null;
+		String line;
+		int count = 0;
+
+		File f = new File(path);
+
+		if (f.exists() && f.isFile() && f.getName().contains(".txt")) {
+
+			try {
+				br = new BufferedReader(new FileReader(f));
+				while ((line = br.readLine()) != null) {
+					String[] x = line.split(" ");
+					for (String v : x) {
+						if (v.equals(word))
+							count++;
+					}
+				}
+				System.out.println("the count of the words are" + ".............> " + count);
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+
+		}
+
+		else if (f.exists() && f.isDirectory()) {
+
+			try {
+				File[] fa = f.listFiles();
+
+				for (File x : fa) {
+					if (x.getName().contains(".txt")) {
+						br = new BufferedReader(new FileReader(x));
+						while ((line = br.readLine()) != null) {
+							String[] str = line.split(" ");
+							for (String v : str) {
+								if (v.equals(word))
+									count++;
+							}
+						}
+
+					}
+
+				}
+
+			} catch (IOException e) {
+
+				e.printStackTrace();
+			}
+
+		}
+		System.out.println("the count of the words are" + ".............> " + count);
+	}
+}
 
 =========================================================================================================================================
 /* Print out which word is occurring the max number of times in a file.

@@ -275,6 +275,81 @@ public class IOQuestion10 {
 		System.out.println("the count of the words are" + ".............> " + count);
 	}
 }
+=========================================================================================================================================
+/*Take 2 file paths from the user and identify which words are not present in both the files*/
+
+import java.io.*;
+import java.util.*;
+
+public class CollectionExample {
+
+	public static void main(String[] args) {
+
+		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Enter the path of first file");
+		String path1 = sc1.next();
+		System.out.println("Enter the path of first file");
+		String path2 = sc2.next();
+
+		Set<String> s1 = new TreeSet<String>();
+		Set<String> s2 = new TreeSet<String>();
+		Set<String> s3 = new TreeSet<String>();
+		Set<String> s4 = new TreeSet<String>();
+		BufferedReader br1 = null;
+		BufferedReader br2 = null;
+
+		try {
+			br1 = new BufferedReader(new FileReader(path1));
+			String line;
+			while ((line = br1.readLine()) != null) {
+				String[] x = line.split(" ");
+				for (String s : x) {
+					s1.add(s);
+				}
+			}
+
+			br2 = new BufferedReader(new FileReader(path2));
+			String line2;
+			while ((line2 = br2.readLine()) != null) {
+				String[] x = line2.split(" ");
+				for (String s : x) {
+					s2.add(s);
+				}
+			}
+
+			System.out.println(s1);
+			System.out.println(s2);
+
+			for (String s : s1) {
+				if (s2.contains(s)) {
+					s3.add(s);
+				} else {
+					s4.add(s);
+				}
+			}
+
+			s2.removeAll(s3);
+			s2.addAll(s4);
+			System.out.println("Unique words are" + ".................>" + s2);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br1 != null) {
+					br1.close();
+				}
+				if (br2 != null) {
+					br2.close();
+				}
+
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+}
 
 =========================================================================================================================================
 /* Print out which word is occurring the max number of times in a file.

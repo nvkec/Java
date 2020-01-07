@@ -360,11 +360,63 @@ b)Create a List<String> words = new ArrayList<String>();
 c)Using BufferedReader, read one line at a time, split it by space and add all the words from String[] to the words list.
 d)After all lines content has been added to the words list, loop over 
 each word and find its number of occurrence using Collections.frequency().
-e)Print the one which has max num of occ.
+e)Print the one which has max num of occ.   Not implemented in the below code
 */
 
+import java.io.*;
+import java.util.*;
 
+public class CollectionExample {
 
+	public static void main(String[] args) {
+
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Enter a path of input file");
+		String path = sc1.next();
+
+		String line;
+		BufferedReader br = null;
+		File f = new File(path);
+
+		List<String> li = new ArrayList<String>();
+		Map<String, Integer> m = new LinkedHashMap<>();
+
+		if (f.exists() && f.isFile()) {
+			try {
+				br = new BufferedReader(new FileReader(f));
+				while ((line = br.readLine()) != null) {
+					String[] x = line.split(" ");
+					for (String v : x) {
+						li.add(v);
+					}
+
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			finally {
+				try {
+					if (br != null)
+						br.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} else {
+			System.out.println("Pass a valid text file path to continue!");
+		}
+
+		for (String temp : li) {
+			int occ = Collections.frequency(li, temp);
+			m.put(temp, occ);
+		}
+		System.out.println(m);
+	}
+}
+
+===========================================================================================================================================
+/* Sort all the words in a file and print out words a) sorted without duplicates b) sorted with duplicates */
 
 
 

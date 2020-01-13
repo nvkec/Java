@@ -54,7 +54,8 @@ TestScanner.java)*/
        
        
 ===========================================================================================================================================================================================================================================================================
-/*Write a program to read input path of a text file from the user and print its contents to the monitor.Code it directly in main() for now.*/
+/*Write a program to read input path of a text file from the user and print its contents to the monitor.Code it directly in main() for 
+now.*/
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -417,6 +418,24 @@ public class CollectionExample {
 
 ===========================================================================================================================================
 /* Sort all the words in a file and print out words a) sorted without duplicates b) sorted with duplicates */
+
+
+
+
+===========================================================================================================================================
+/* Have a file (friends.txt) with your friend names (one name per line).Read each line from the fileand print it in main(). Then ask the
+user to edit a name (by asking him what name to edit and then what should be the new name). Read all the names into a collection except
+the name to edit. Add the new name to the collection. Create a FileWriter on the same file (without append being set) and then overwrite
+the contents. Then do the same to delete a name from the file by asking the user. This is an important example to understand how to 
+edit/delete contents of a file */
+
+
+
+
+
+
+===========================================================================================================================================
+/* Build a Menu and ask the user to add/update/list/delete a phone book of contacts. Look into the demo example and then start this */
 
 
 

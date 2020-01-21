@@ -419,8 +419,49 @@ public class CollectionExample {
 ===========================================================================================================================================
 /* Sort all the words in a file and print out words a) sorted without duplicates b) sorted with duplicates */
 
+import java.io.*;
+import java.util.*;
 
+public class Question8 {
 
+	public static void main(String[] args) {
+		Scanner sc1 = new Scanner(System.in);
+
+		System.out.println("enter the path of the path of  file");
+		String path1 = sc1.next();
+
+		BufferedReader br = null;
+		File f1 = new File(path1);
+		List<String> l = new ArrayList<String>();
+		Set<String> s1 = new TreeSet<String>();
+
+		try {
+			br = new BufferedReader(new FileReader(f1));
+			String line;
+
+			while ((line = br.readLine()) != null) {
+				String[] sa = line.split(" ");
+				for (String s : sa)
+					l.add(s);
+			}
+			Collections.sort(l);
+			System.out.println("sorting with duplicates" + ".......>" + l);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null)
+				try {
+					br.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
+
+	}
+
+}
 
 ===========================================================================================================================================
 /* Have a file (friends.txt) with your friend names (one name per line).Read each line from the fileand print it in main(). Then ask the

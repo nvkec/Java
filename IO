@@ -479,6 +479,90 @@ edit/delete contents of a file */
 ===========================================================================================================================================
 /* Build a Menu and ask the user to add/update/list/delete a phone book of contacts. Look into the demo example and then start this */
 
+import java.io.*;
+import java.util.*;
+
+public class Question11 {
+
+	public static void main(String[] args) {
+		Scanner sc1 = new Scanner(System.in);
+		Scanner sc2 = new Scanner(System.in);
+
+		BufferedReader br = null;
+		BufferedWriter bw = null;
+
+		List<String> l = new ArrayList<String>();
+
+		int ch = 0;
+		try {
+			while (ch != 5) {
+				System.out.println("Press 1 to enter name");
+				System.out.println("Press 2 to list names");
+				System.out.println("Press 3 to remove names");
+				System.out.println("Press 4 to search part name");
+				System.out.println("Press 5 to exit");
+
+				ch = sc1.nextInt();
+				System.out.println("Entered ch is " + ch);
+
+				switch (ch) {
+				case 1:
+					System.out.println("Enter the name to add...");
+					String name = sc2.nextLine();
+					bw = new BufferedWriter(new FileWriter("names.txt", true));
+
+					bw.write(name);
+					bw.newLine();
+					bw.close();
+					break;
+
+				case 2:
+					System.out.println("Listing name...");
+					String line;
+					br = new BufferedReader(new FileReader("names.txt"));
+
+					while ((line = br.readLine()) != null)
+						l.add(line);
+
+					System.out.println("Listing names " + l);
+					break;
+
+				case 3:
+
+				case 4:
+					System.out.println("Searching name...");
+					System.out.println("Eneter the part name to search...");
+					String part = sc1.next();
+					String line1;
+					br = new BufferedReader(new FileReader("names.txt"));
+
+					while ((line1 = br.readLine()) != null)
+						if (line1.contains(part))
+							System.out.println("match found " + line1);
+
+					break;
+
+				case 5:
+					System.out.println("Exiting...");
+					break;
+
+				default:
+					System.out.println("Enter from 1 -5 only");
+					break;
+
+				}
+
+			}
+
+		}
+
+		catch (Exception e) {
+				e.printStackTrace();
+		}
+
+	}
+
+}
 
 
 

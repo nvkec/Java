@@ -443,6 +443,7 @@ public class Question8 {
 				String[] sa = line.split(" ");
 				for (String s : sa)
 					l.add(s);
+					//  s1.add(s);//print s1 you will get without duplicates
 			}
 			Collections.sort(l);
 			System.out.println("sorting with duplicates" + ".......>" + l);

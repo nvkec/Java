@@ -1,0 +1,10 @@
+/* A device has a name and can do something. TV, Printer and Microwave are devices. Using TV, you can watch movie; using Printer, you can 
+print; using Microwave, you can cook (all these are doSomething() implementations - so override them in the respective classes).When a device
+is made to dosomething, it shouts out its name as well. An Electrician is one who can test any device. When he is asked to test a device, he 
+will make it do something and test it. A TV can switchChannel as well (delta functionality). So if a tv is given to be tested to an 
+electrician, he will make the tv dosomething and switch channel as well. Write a tester class to test how devices, electricians work.
+If Device has a private String name, do Printer, TV, etc subclasses have a name? If yes, how to access it in overridden doSomething() 
+method? Try it out.
+Follow these steps one by one to implement the above problem.
+
+1) Frist build the Device.java class in source folder with the Device class definition.
